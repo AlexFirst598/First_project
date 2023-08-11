@@ -114,6 +114,8 @@ ul {
   font-weight: 700;
   line-height: 30px; /* 125% */
   text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 16px;
 }
 .wap-sub {
   color: #283136;
