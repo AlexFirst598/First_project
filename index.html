@@ -14,12 +14,13 @@
             <a href="#" class="logo-nerds"><img src="Images/nerds-logo.svg" alt="Logo"></a>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#" class="link nav__link">Студия</a></li>
+                    <li class="nav__item"><a href="#" class="link nav__link link--current">Студия</a></li>
                     <li class="nav__item"><a href="#" class="link nav__link">Клиенты</a></li>
                     <li class="nav__item"><a href="#" class="link nav__link">Магазин</a></li>
                     <li class="nav__item"><a href="#" class="link nav__link">Контакты</a></li>
                 </ul>
             </nav>
+            <i class="bi bi-1-square"></i>
             <a href="#" class="link header__cart">Корзина</a>
         </div>
     </header>
@@ -44,13 +45,13 @@
                         <img src="Images/apps.png" alt="Apps">
                         <h3 class="wap-main">Приложения</h3>
                         <p class="wap-sub">Покорите топ-10 приложений <br> в AppStore и Google Play</p>
-                        <a href="#" style="background-color: #00CA74;" class="btn">Заказать</a>
+                        <a href="#" class="btn btn-green">Заказать</a>
                     </li>
                     <li>
                         <img src="Images/prisentation.png" alt="prisentation">
                         <h3 class="wap-main">Презентации</h3>
                         <p class="wap-sub">Вы даже не подозреваете, <br> насколько вы изумительны!</p>
-                        <a href="#" style="background-color: #EFC849;" class="btn">Заказать</a>
+                        <a href="#" class="btn btn-yellow">Заказать</a>
                     </li>
                 </ul>
             </div>
@@ -111,40 +112,59 @@
                 <ul class="list brands-padding">
                     <li class="brands">
                         <a href="#" class="brands-logo">
-                            <img src="Images/Brands1.png" alt="">
+                            <img src="Images/Group1.png" alt="">
                         </a>
-                        <div class="stick"></div>
                     </li>
                     <li class="brands">
                         <a href="#" class="brands-logo">
-                            <img src="Images/Brands2.png" alt="">
+                            <img src="Images/group2.png" alt="">
                         </a>
-                        <div class="stick"></div>
                     </li>
                     <li class="brands">
                         <a href="#" class="brands-logo">
-                            <img src="Images/Brands3.png" alt="">
+                            <img src="Images/group3.png" alt="">
                         </a>
-                        <div class="stick"></div>
                     </li>
-                    <li class="brands"><a href="#" class="brands-logo"><img src="Images/Brands4.png" alt=""></a></li>
+                    <li class="brands">
+                        <a href="#" class="brands-logo">
+                            <img src="Images/group4.png" alt="">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>
     </main>
     <footer>
+        <section class="map">
+            <div class="map-img">
+                <iframe src="https://snazzymaps.com/embed/3263" style="border:none;" height="416px" width="100%"
+                    title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+            </div>
+            <div class="container map__wrapper">
+                <div class="block-map">
+                    <h4 class="h4-map">NЁRDS DESIGN STUDIO</h4>
+                    <p class="p-map">
+                        191186, Санкт-Петербург, <br> ул. Б. Конюшенная, д. 19/8 <br> <br> тел. <a
+                            href="tel:+78122757575">+7 (812) 275-75-75</a>
+                    </p>
+                    <a href="#" class="btn">Напишите нам</a>
+                </div>
+            </div>
+        </section>
         <section>
             <div class="container footer__wrapper">
                 <ul class="footer__list">
                     <li>
-                        <a href="vk.com" class="footer__link"><img src="Images/vk-icon.svg" alt="Вк"></a>
+                        <a href="https://vk.com" target="_blank" class="footer__link"><img src="Images/vk-icon.svg"
+                                alt="Вк"></a>
                     </li>
                     <li>
-                        <a href="facebook.com" class="footer__link"><img src="Images/fb-icon.svg" alt="Фб"></a>
+                        <a href="https://facebook.com" target="_blank" class="footer__link"><img
+                                src="Images/fb-icon.svg" alt="Фб"></a>
                     </li>
                     <li>
-                        <a href="instagram.com" class="footer__link"><img src="Images/insta-icon.svg"
-                                alt="Инстаграм"></a>
+                        <a href="https://instagram.com" target="_blank" class="footer__link"><img
+                                src="Images/insta-icon.svg" alt="Инстаграм"></a>
                     </li>
                 </ul>
                 <div>
@@ -158,5 +178,30 @@
             </div>
         </section>
     </footer>
+    <div class="modal">
+        <div class="modal__header">
+            <h3 class="modal-h3">
+                Напишите нам
+            </h3>
+            <a href="#" class="close-img"><img src="Images/close-cross.svg" alt=""></a>
+        </div>
+        <div class="div-content">
+            <label for="" class="lable lable2 lable-padding">
+                <span><b>Ваше имя:</b></span>
+                <input type="text" placeholder="Имя фамилия" class="input-class" maxlength="16" required minlength="2">
+            </label>
+            <label for="" class="lable lable1">
+                <span><b>Ваш e-mail:</b></span>
+                <input type="email" placeholder="example@gmail.com" class="input-class" required>
+            </label>
+            <label for="" class="lable lable-textarea">
+                <span><b>Ваш текст:</b></span>
+                <textarea cols="30" rows="10" class="input-class textarea-class" placeholder="Введите текст"></textarea>
+            </label>
+        </div>
+        <a href="#" class="btn">Отправить</a>
+    </div>
+    <script src="main.js"></script>
+</body>
 
 </html>
