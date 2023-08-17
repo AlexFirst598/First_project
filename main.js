@@ -1,19 +1,15 @@
-const button = document.querySelector('.btn-js');
-
-button.classList.remove('btn-js');
-button.classList.add('new_class');
-button.classList.toggle('new_class');
+const button = document.querySelector('#OpenGui');
+const modal = document.querySelector('.modal');
+const close = document.querySelector('.close-img');
+const InputActive = document.querySelector('#InputFocus');
 
 button.addEventListener('click', (e) => {
     e.preventDefault();
-    button.classList.toggle('open');
+    modal.classList.add('modal-active');
+    InputActive.focus();
 });
 
-const btns = document.querySelectorAll('.btn');
-console.log(btns);
-
-btns.forEach(btn => {
-    btn.classList.add('new_class');
+close.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.remove('modal-active');
 });
-
-console.log(btns);

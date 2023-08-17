@@ -1,0 +1,320 @@
+.head {
+  background-color: #EEE;
+  padding-top: 78px;
+  padding-bottom: 108px;
+}
+
+.head h1 {
+  text-align: center;
+  color: #000;
+  font-family: Roboto;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 55px;
+  /* 100% */
+}
+
+.content {
+  padding: 55px 0 60px;
+}
+
+.content__wrapper {
+  display: flex;
+}
+
+/*скрываеться стандартная кнопка для элемента input c type="radio" */
+.custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label связанного с .custom-radio */
+.custom-radio+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  color: #283136;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  /* 118.75% */
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio+label::before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 12.5C0 5.597 5.597 0 12.5 0C19.403 0 25 5.597 25 12.5C25 19.403 19.403 25 12.5 25C5.597 25 0 19.403 0 12.5ZM21 12.5C21 7.813 17.187 4 12.5 4C7.813 4 4 7.813 4 12.5C4 17.187 7.813 21 12.5 21C17.187 21 21 17.187 21 12.5Z' fill='%234D4D4D'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  transition: opacity 0.3s;
+  margin-right: 11px;
+}
+
+/* стили при наведении курсора на радио */
+.custom-radio:not(:disabled):not(:checked)+label:hover::before {
+  opacity: 1;
+}
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+.custom-radio:not(:disabled):active+label::before {
+  opacity: 1;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio:checked+label::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 12.5C0 5.597 5.597 0 12.5 0C19.403 0 25 5.597 25 12.5C25 19.403 19.403 25 12.5 25C5.597 25 0 19.403 0 12.5ZM21 12.5C21 7.813 17.187 4 12.5 4C7.813 4 4 7.813 4 12.5C4 17.187 7.813 21 12.5 21C17.187 21 21 17.187 21 12.5Z' fill='%234D4D4D'/%3E%3Cpath d='M12.5 17C14.9853 17 17 14.9853 17 12.5C17 10.0147 14.9853 8 12.5 8C10.0147 8 8 10.0147 8 12.5C8 14.9853 10.0147 17 12.5 17Z' fill='%234D4D4D'/%3E%3C/svg%3E");
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.custom-radio:disabled+label::before {
+  opacity: 0.1;
+}
+
+.content-title {
+  color: #000;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  /* 166.667% */
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+.content__list {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+/* Скрываем стандартный чекбокс */
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* Стилизуем Lable */
+.custom-checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  color: #283136;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 125% */
+}
+
+/* Сам чекбокс в покое */
+.custom-checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z' fill='%234D4D4D'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  margin-right: 11px;
+  transition: opacity 0.3s;
+}
+
+/* Чек бокс отмеченый */
+.custom-checkbox:checked+label::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='23' viewBox='0 0 25 23' fill='none'%3E%3Cpath d='M6.95925 8.48591L4.25684 11.3149L11.6916 19.0979L25.0002 5.16591L22.2988 2.33691L11.6916 13.4389L6.95925 8.48591Z' fill='%234D4D4D'/%3E%3Cpath d='M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z' fill='%234D4D4D'/%3E%3C/svg%3E");
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+  opacity: 1;
+}
+
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active+label::before {
+  opacity: 1;
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled+label::before {
+  opacity: 0.1;
+}
+
+.content-group1 {
+  margin-bottom: 43px;
+}
+
+.btn-gray {
+  background-color: #EEE;
+  color: #000;
+  width: 260px;
+  height: 50px;
+}
+
+.btn-gray:hover {
+  background: #DFDFDF;
+}
+
+.btn-gray:active {
+  background: #D5D5D5;
+  color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 0px 0px rgba(0, 1, 1, 0.10) inset;
+}
+
+.content-right {
+  width: 760px;
+}
+
+.content__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 47px;
+}
+
+.filters-names {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.filter-name {
+  color: #000;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  /* 128.571% */
+  text-transform: uppercase;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.filter-name:hover {
+  opacity: 0.6;
+}
+
+.filter-name:active {
+  opacity: 1;
+}
+
+.filter-name-current {
+  opacity: 1;
+}
+
+.title-filter {
+  margin-bottom: 0;
+}
+
+.filter-arrow1 {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10' fill='none'%3E%3Cpath d='M5.5 10L0 0H11' fill='%23231F20'/%3E%3C/svg%3E");
+}
+
+
+.filter-arrow2 {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10' fill='none'%3E%3Cpath d='M5.5 0L0 10H11L5.5 0Z' fill='%23231F20'/%3E%3C/svg%3E");
+}
+
+.filter-arrow {
+  width: 11px;
+  height: 10px;
+  opacity: 0.2;
+  transition: opacity 0.3s;
+}
+
+.filter-arrow:hover {
+  opacity: 0.6;
+}
+
+.filter-arrow:active,
+.filter-arrow-current {
+  opacity: 1;
+}
+
+.filters-arrows {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 41px;
+  row-gap: 31px;
+}
+
+.card {
+  width: 359px;
+  height: 618px;
+  cursor: pointer;
+  position: relative;
+}
+
+.shape {
+  width: 100%;
+  height: 40px;
+  background-color: #FFF;
+}
+
+.shape img {
+  opacity: 0.2;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.block {
+  width: 100%;
+  height: 231px;
+  background-color: #EEE;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 26px 80px 44px;
+  box-sizing: border-box;
+}
+
+.block-title {
+  margin-bottom: 12px;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  /* 166.667% */
+  text-transform: uppercase;
+}
+
+.block-descr {
+  color: #666;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  /* 112.5% */
+
+}
