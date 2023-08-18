@@ -21,6 +21,7 @@
 
 .content__wrapper {
   display: flex;
+  justify-content: space-between;
 }
 
 /*скрываеться стандартная кнопка для элемента input c type="radio" */
@@ -176,6 +177,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 55px;
 }
 
 .filters {
@@ -273,11 +275,12 @@
 
 .shape img {
   opacity: 0.2;
+  transition: opacity 0.3s;
 }
 
-.card img {
+.card-img {
   width: 100%;
-  height: 100%;
+  height: 578px;
 }
 
 .block {
@@ -292,6 +295,8 @@
   text-align: center;
   padding: 26px 80px 44px;
   box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .block-title {
@@ -317,4 +322,46 @@
   line-height: 18px;
   /* 112.5% */
 
+}
+
+.card:hover .block {
+  opacity: 1;
+}
+
+.card:hover .shape img {
+  opacity: 1;
+}
+
+.block-title {
+  color: #000;
+  transition: color 0.3s, opacity 0.3s;
+  user-select: none;
+}
+
+.block-title:hover {
+  color: #FB565A;
+}
+
+.block-title:active {
+  color: #000;
+  opacity: 0.3;
+}
+
+.pagination {
+  display: flex;
+  gap: 11px;
+  margin-top: 55px;
+}
+
+.btn-num {
+  width: 50px;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
+.btn-num-current {
+  border-radius: 3px;
+  border: 3px solid #DBDBDB;
+  background: rgba(0, 0, 0, 0.00);
+  padding-top: 13px;
 }
