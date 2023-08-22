@@ -348,12 +348,67 @@ ul {
   background: #eee;
 }
 
-.slider__wrapper {
-  background-image: url("Images/nerds-slide.png");
+.slide {
   background-repeat: no-repeat;
   background-position: right 0;
   padding-top: 78px;
   padding-bottom: 80px;
+}
+
+.slider__wrapper {
+  position: relative;
+}
+
+.dots {
+  position: absolute;
+  left: calc(50% - 88px / 2);
+  bottom: 96px;
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  background: #FFF;
+  transition: background 0.3s;
+  cursor: pointer;
+  filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.15));
+}
+
+.dot:hover {
+  background: #00CA74;
+}
+
+.dot-active {
+  background: #EFC849;
+}
+
+.slide_first {
+  display: none;
+  background-repeat: no-repeat;
+  background-image: url("Images/nerds-slide.png");
+  background-position: right 0;
+}
+
+.slide_second {
+  display: none;
+  background-repeat: no-repeat;
+  background-image: url("Images/slide2.png");
+  background-position: right 0;
+}
+
+.slide_third {
+  display: none;
+  background-repeat: no-repeat;
+  background-image: url("Images/slide3.png");
+  background-position: right 20px;
+}
+
+.slide-active {
+  display: block;
 }
 
 .footer__list {
@@ -502,6 +557,7 @@ ul {
   top: calc(50% - 660px / 2);
   display: none;
 }
+
 .modal-active {
   display: block;
 }

@@ -38,6 +38,23 @@
             <div class="container content__wrapper">
                 <div class="content-left">
                     <h2 class="content-title">Стоимость:</h2>
+                    <div class="slider-wrapper">
+                        <div class="slider-container">
+                            <div class="slider-track"></div>
+                            <input type="range" min="0" max="15000" value="0" id="slider-1" oninput="slideOne()">
+                            <input type="range" min="0" max="15000" value="5000" id="slider-2" oninput="slideTwo()">
+                        </div>
+                    </div>
+                    <div class="values">
+                        <div class="values__group">
+                            <label for="range1">ОТ</label>
+                            <input type="number" class="input-number"  id="range1" value="0" min="0" max="15000">
+                        </div>
+                        <div class="values__group">
+                            <label for="range2">ДО</label>
+                            <input type="number" class="input-number" id="range2" value="5000" min="0" max="15000">
+                        </div>
+                    </div>
                     <div class="content-group1">
                         <h2 class="content-title">Сетка:</h2>
                         <ul class="content__list">
@@ -227,7 +244,7 @@
         </div>
         <a href="#" class="btn">Отправить</a>
     </div>
-    <script src="main.js"></script>
+    <script src="shop.js"></script>
 </body>
 
 </html>

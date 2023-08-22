@@ -365,3 +365,162 @@
   background: rgba(0, 0, 0, 0.00);
   padding-top: 13px;
 }
+
+
+
+.slider-wrapper {
+  position: relative;
+  width: 260px;
+  border-radius: 3px;
+  background: #EEE;
+  padding: 39px 22px;
+  box-sizing: border-box;
+  margin-top: 35px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  outline: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.slider-track {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 2px;
+}
+
+input[type="range"]::-moz-range-track {
+  -moz-appearance: none;
+  height: 2px;
+}
+
+input[type="range"]::-ms-track {
+  appearance: none;
+  height: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  background-color: #FFF;
+  width: 20px;
+  filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.15));
+  cursor: pointer;
+  margin-top: -9px;
+  pointer-events: auto;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #FFF;
+  filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.15));
+  pointer-events: auto;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s;
+
+}
+
+input[type="range"]::-ms-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #FFF;
+  filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.15));
+  pointer-events: auto;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s;
+
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  background-color: #FB565A;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+  background-color: #FB565A;
+}
+
+.values {
+  display: flex;
+  gap: 33px;
+  align-items: center;
+  margin-top: 14px;
+  margin-bottom: 54px;
+}
+
+.values__group {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+
+.input-number {
+  border: none;
+  outline: none;
+  width: 80px;
+  height: 38px;
+  border-radius: 3px;
+  background: #EEE;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #283136;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  /* 137.5% */
+  text-transform: uppercase;
+}
+
+
+
+.input-number::-webkit-outer-spin-button,
+.input-number::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
